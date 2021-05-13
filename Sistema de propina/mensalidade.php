@@ -15,6 +15,15 @@
 
     $mesPagamento = 1;
 
+    if($saldo[0] >= $emolumento[0]){
+      if($service[0] == "Propina") {
+        if($data[0] <= 15 && $mesActual == $mesPagamento){
+            $saldoFinal = $saldo[0] - $emolumento[0];
+        }
+      }
+    }else {
+      echo "Saldo Insuficiente "
+    }
     echo $mesActual;
     die();
 
