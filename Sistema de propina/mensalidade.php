@@ -13,18 +13,23 @@
     $mesAnterior = $mesActual - 1;
     $mesPosterior = $mesActual + 1;
 
-    $mesPagamento = 1;
+    $mesPagamento = 05;
 
-    if($saldo[0] >= $emolumento[0]){
-      if($service[0] == "Propina") {
+    if($sold[0] >= $emolumento[0]){
+      if($service[0] == 'Propina'){
         if($data[0] <= 15 && $mesActual == $mesPagamento){
-            $saldoFinal = $saldo[0] - $emolumento[0];
+          $soldEnd = $sold[0] - $emolumento[0];
+          echo "Pagamento da propina do mes ".$mesPagamento." no valor de ".number_format($emolumento[0],2,',','.')."kz / saldo apos a operação é de ".number_format($soldEnd,2,',','.')."kz";
+        } elseif($mesPagamento > $mesActual){
+
         }
       }
-    }else {
-      echo "Saldo Insuficiente "
     }
-    echo $mesActual;
+    else{
+      echo 'Saldo insuficiente';
+    }
+
+    // echo $mesActual;
     die();
 
     echo "O saldo do cartão do aluno ".$students[0]." é de ".number_format($sold[0],2,',','.')."Kz";
