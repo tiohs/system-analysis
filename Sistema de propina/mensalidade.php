@@ -21,7 +21,10 @@
           $soldEnd = $sold[0] - $emolumento[0];
           echo "Pagamento da propina do mes ".$mesPagamento." no valor de ".number_format($emolumento[0],2,',','.')."kz / saldo apos a operação é de ".number_format($soldEnd,2,',','.')."kz";
         } elseif($mesPagamento > $mesActual){
-
+          $soldEnd = $sold[0] - $emolumento[0];
+          echo "Pagamneto da propina do mês : ".$mesPagamento." KZ/ no valor de : ".
+          number_format($emolumento[0], 2, ',', '.')." Kz/ Saldo pós-operação ".
+          number_format($emolumento[0], 2, ',', '.')." Kz/  ";
         }
       }
     }
