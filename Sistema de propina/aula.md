@@ -21,6 +21,9 @@
 
   ## echo pagamentoPropina();
 
+  ##home work
+  --> form html for that with student name, emolument for pay month
+
 ### ?>
 
 ### si
